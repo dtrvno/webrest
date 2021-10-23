@@ -35,10 +35,12 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<!-- for security -->
+<!--
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
+-->
 		<!-- for exploring api-->
 		<dependency>
 			<groupId>org.springframework.data</groupId>
