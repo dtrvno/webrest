@@ -4,9 +4,11 @@ import javax.annotation.processing.Generated;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class User {
@@ -39,6 +41,17 @@ public class User {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    @OneToMany(mappedBy = "user")
+    private List<Post> posts;
+
+    public void setPosts(List<Post> posts) {
+        this.posts = posts;
+    }
+
+    public List<Post> getPosts() {
+        return posts;
     }
 
     @Override
